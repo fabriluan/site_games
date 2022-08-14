@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html,body{
+    height: 100%;
+    background-color: #f1e8fa;
+}
+.center{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+header.header_site{
+    width: 100%;
+    height: 80px;
+    background-color: #6d09af;
+    padding: 0 2%;
+}
+.header_site > .center{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_site .logo{
+    width: 100px;
+    padding: 20px;
+    background-image: url('../img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.header_site ul.desktop{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.header_site ul.app{
+    display: none;
+}
+.header_site ul li{
+    padding: 10px;
+}
+.header_site ul li a{
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.5rem;
+}
+.header_site ul li a:hover{
+    background-color: white;
+    color: #55038C;
+    transition: 0.8s;
+}
+
+/* Banner */
+
+article.banner{
+    width: 100%;
+    height: 75vh;
+    min-height: 550px;
+    display: flex;
+    flex-direction: row;
+    background-color: #956BBF;
+    color: white;
+}
+.banner_text{
+    width: 50%;
+    height: 100%;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.banner_text h2{
+    font-size: 45px;
+    font-weight: 300;
+}
+.banner_text p{
+    text-align: 22px;
+}
+.banner_background{
+    width: 50%;
+    padding: 2%;
+    background-image: url('../img/banner02.jpg');
+    filter: opacity(0.8);
+    background-color: black;
+    background-size: cover;
+    background-position: 50% 100%;
+}
+
+/* Products */
+
+section.product{
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+}
+.product h1{
+    font-size: 35px;
+    font-weight: 300;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.product > .center{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.product_cards{
+    min-width: 32%;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: white;
+    border-radius: 0.5em;
+}
+.product_cards img{
+    width: 80%;
+    height: 230px;
+    background-color: red;
+    border-radius: 0.5em;
+    margin-bottom: 20px;
+}
+.product_cards h2{
+    font-size: 28px;
+    font-weight: 400;
+    padding: 5px 0;
+}
+.product_cards p{
+    font-size: 19px;
+    width: 85%;
+}
