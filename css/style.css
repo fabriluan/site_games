@@ -15,8 +15,9 @@ html,body{
     margin: 0 auto;
 }
 header.header_site{
+    position: fixed;
     width: 100%;
-    background-color: #6d09af;
+    background-color: #6d09af00;
     padding: 10px 2%;
 }
 .header_site > .center{
@@ -75,7 +76,7 @@ article.banner{
     color: white;
     font-family: 'Arcade';
     width: 50%;
-    height: 80%;
+    height: 95%;
     padding: 0 5%;
     display: flex;
     flex-direction: column;
@@ -109,10 +110,11 @@ section.product{
     justify-content: space-evenly;
 }
 .product_cards{
-    min-width: 32%;
-    width: 32%;
+    max-width: 32%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     padding: 20px 10px;
     background-color: white;
@@ -186,4 +188,160 @@ section.galery{
 }
 .gal_text_group:nth-child(2){
     width: calc(100% - 150px);
+}
+
+/* About */
+
+section.about{
+    text-align: center;
+    padding: 1% 2% 2% 2%; 
+    background-color: white;
+}
+.about > h2{
+    font-size: 39px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.info_text_group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.info_text{
+    width: 32%;
+    padding: 5px;
+}
+.info_text i{
+    font-size: 40px;
+}
+.info_text h2{
+    font-size: 28px;
+    font-weight: 300;
+    padding: 12px 0;
+}
+.info_text p{
+    font-size: 19px;
+    font-weight: 300;
+}
+
+/* Contato */
+
+section.contact{
+    text-align: center;
+    padding: 2%;
+}
+section.contact h1{
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+section.contact > .center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+form.form_contact{
+    width: 50%;
+    margin: 10px;
+    background-color: white;
+}
+form.form_contact h2{
+    font-size: 26px;
+    padding: 10px 5px;
+    font-weight: 300;
+}
+.input_group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+.input_group label{
+    font-weight: 300;
+    font-size: 18px;
+    padding: 5px 0;
+}
+.input_group input{
+    width: 100%;
+    height: 30px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 300;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+.input_group textarea{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    outline: none;
+    resize: vertical;
+}
+.input_group:nth-child(5){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.input_group input[type=checkbox]{
+    cursor: pointer;
+    width: 20px; 
+    margin-right: 10px;
+}
+
+.form_contact input[type=submit]{
+    width: 30%;
+    font-size: 19px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 0 1.5em 1.5em 0; 
+    text-transform: uppercase;
+    color: white;
+    background-color: #8d61b9;
+    outline: none;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.form_contact input[type=submit]:hover{
+    transform: scale(1.07);
+    transition: 0.9s;
+}
+div#map{
+    width: 50%;
+    background-color: red;
+    margin: 10px;
+}
+
+/* Footer */
+
+footer.footer_site{
+    width: 100%;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    padding: 15px;
+    background-color: #8d61b9;
+}
+.footer_site span{
+    display: block;
+    font-size: 19px;
+    margin: 10px 0;
+}
+.footer_site a{
+    font-size: 23px;
+    padding: 5px;
+    margin: 0 2px;
+    /* background-color: yellow; */
+    color: white;
+}
+.footer_site a:hover{
+    font-size: 25px;
+    color: #8d61b9;
+    background-color: white;
+    border-radius: 1.5rem;
+    transition: 0.9s;
 }
