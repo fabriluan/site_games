@@ -1,6 +1,7 @@
 ActivateHeader();
 function ActivateHeader(){
-    const header = document.querySelector('.header_site')
+    const header = document.querySelector('.header_site');
+    const $menu = document.querySelector('.app');
 
     // alert(window.screen.availWidth);
     // alert(window.screen.availHeight);
@@ -9,12 +10,14 @@ function ActivateHeader(){
     window.addEventListener('scroll', ()=>{
 
         let Tambanner = document.querySelector('.banner').clientHeight;
-        let Tamheader = header.clientHeight;
+        let Tamheader = header.clientHeight + 10;
 
         if(scrollY > (Tambanner - Tamheader)){
-            header.style.backgroundColor = '#6d09af';
+          header.style.backgroundColor = '#6d09af';
+        }else if($menu.classList.contains('show_menu')){
+          header.style.backgroundColor = '#6d09af';
         }else{
-            header.style.backgroundColor = '#6d09af00';
+          header.style.backgroundColor = '#6d09af00';
         }
     })
 }
@@ -78,11 +81,11 @@ function SendInput(){
     function VerifForm(){
 
       function VerifInput(input){
-        input.value = 'Está vazio';
+        input.setAttribute('placeholder', 'Está Vazio');
         input.classList.add('input_empty')
 
-        input.addEventListener('click', ()=>{
-            input.value = '';
+        input.addEventListener('focus', ()=>{
+            input.setAttribute('placeholder', 'Digite seu nome:');
             input.classList.remove('input_empty');
         })
       }
@@ -94,11 +97,11 @@ function SendInput(){
 
         setInterval(() => {
           $info.style.display = 'none';
-
-          $name.value = '';
-          $email.value = '';
-          $message.value = '';
         }, 2000);
+
+        $name.value = '';
+        $email.value = '';
+        $message.value = '';
 
       }
 
