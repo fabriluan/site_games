@@ -333,7 +333,7 @@ footer.footer_site{
 }
 .footer_site a{
     font-size: 23px;
-    padding: 5px;
+    padding: 0 5px;
     margin: 0 2px;
     /* background-color: yellow; */
     color: white;
@@ -342,6 +342,6 @@ footer.footer_site{
     font-size: 25px;
     color: #8d61b9;
     background-color: white;
-    border-radius: 1.5rem;
+    border-radius: 1.5em;
     transition: 0.9s;
 }
