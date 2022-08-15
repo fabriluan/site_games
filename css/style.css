@@ -19,6 +19,8 @@ header.header_site{
     width: 100%;
     background-color: #6d09af00;
     padding: 10px 2%;
+    z-index: 2;
+    transition: background-color 0.5s;
 }
 .header_site > .center{
     display: flex;
@@ -62,21 +64,26 @@ header.header_site{
 /* Banner */
 
 article.banner{
+    animation: BackgroundView 2s linear forwards;
+
     width: 100%;
     height: 75vh;
-    min-height: 600px;
+    min-height: 700px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     background-image: url('../img/banner02.jpg');
     background-color: black;
     background-size: 160% 120%;
     background-position: 90% 140%;
 }
 .banner_text{
+    animation: TextView 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+
     color: white;
     font-family: 'Arcade';
     width: 50%;
-    height: 95%;
+    height: 150px;
     padding: 0 5%;
     display: flex;
     flex-direction: column;
@@ -84,13 +91,18 @@ article.banner{
     align-items: flex-start;
 }
 .banner_text h2{
+    animation: FadeIn 0.1s 0.75s forwards;
+
     font-size: 50px;
     font-weight: 300;
+    opacity: 0;
 }
 .banner_text p{
+    animation: FadeIn 0.1s 0.75s forwards;
+
+    opacity: 0;
     text-align: 27px;
 }
-
 /* Products */
 
 section.product{
@@ -293,27 +305,79 @@ form.form_contact h2{
     margin-right: 10px;
 }
 
-.form_contact input[type=submit]{
+.form_contact button{
     width: 30%;
     font-size: 19px;
-    padding: 5px;
+    padding: 7px 5px;
     margin: 10px;
-    border-radius: 0 1.5em 1.5em 0; 
     text-transform: uppercase;
-    color: white;
-    background-color: #8d61b9;
+    color: #55038C;
+    background-color: white;
     outline: none;
-    border: 1px solid white;
+    border: 1px solid #55038C;
     cursor: pointer;
 }
-.form_contact input[type=submit]:hover{
+.form_contact button::after{
+    background-color: #55038C;
+    content: '';
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+
+    transition: 0.5s ease-in-out;
+}
+.form_contact button:hover{
+    color: white;
     transform: scale(1.07);
     transition: 0.9s;
 }
+.form_contact button:hover:after{
+    width: 100%;
+    left: 0;
+    top: 0;
+    
+}
+
+/* Input Info */
+
+.input_empty{
+    color: red;
+    border-bottom: 1px solid red !important;
+    background-color: rgba(255, 0, 0, 0.096);
+}
+.input_info{
+    display: none;
+    position: fixed;
+    top: calc(50% - 125px);
+    left: calc(50% - 200px);
+    max-width: 400px;
+    height: 200px;
+    padding: 10px;
+    background-color: rgba(0, 143, 0, 0.863);
+    text-align: center;
+    vertical-align: bottom;
+    color: white;
+}
+.input_info h2{
+    font-size: 27px;
+    font-weight: 300;
+}
+.input_info i{
+    font-size: 45px;
+    margin-top: 20px;
+}
+
+
 div#map{
     width: 50%;
     background-color: red;
     margin: 10px;
+    z-index: -1;
 }
 
 /* Footer */
@@ -344,4 +408,27 @@ footer.footer_site{
     background-color: white;
     border-radius: 1.5em;
     transition: 0.9s;
+}
+
+@keyframes BackgroundView {
+    from{
+        background-size: 165% 125%;
+    }
+    to{
+        background-size: 160% 120%;
+    }
+}
+@keyframes TextView {
+    from {
+        transform: translateX(-101%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes FadeIn {
+    to{
+        opacity: 1;
+    }
 }

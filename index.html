@@ -18,11 +18,12 @@
         <div class="center">
             <div class="logo"></div>
 
-            <nav>
+            <nav class="navbar">
                 <ul class="desktop">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Loja</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#product">Loja</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
                 </ul><!--Desktop-->
 
                 <ul class="app">
@@ -34,18 +35,18 @@
         </div><!--Center-->
     </header><!--Header Site-->
 
-    <article class="banner">
+    <article class="banner" id="home">
         <section class="banner_text">
             <h2>Loja Arcade Store</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
         </section><!--Banner Text-->
     </article><!--Banner-->
 
-    <section class="product">
+    <section class="product" id="product">
         <h1>Principais maquinas de jogos</h1>
         <div class="center">
             <div class="product_cards">
-                <!-- <img src="img/máquinas.jpg" alt="" /> -->
+                <!-- <img src="img/loja.webp" alt="" /> -->
 
                 <h2>Lorem Ipsum</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi vel non, ad quod laborum reiciendis cumque saepe odit voluptatem, facere iusto sint consequatur assumenda ea, voluptatum et minus repudiandae nobis.</p>
@@ -55,7 +56,8 @@
                 <!-- <img src="img/maquina02.jpg" alt="" /> -->
 
                 <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi vel non, ad quod laborum reiciendis cumque saepe odit voluptatem, facere iusto sint consequatur assumenda ea, voluptatum et minus repudiandae nobis.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi vel non, ad quod laborum reiciendis cumque saepe odit voluptatem, fa
+                }cere iusto sint consequatur assumenda ea, voluptatum et minus repudiandae nobis.</p>
             </div><!--Produto Cards-->
 
             <div class="product_cards">
@@ -70,8 +72,8 @@
     <section class="galery">
         <div class="center">
             <div class="gal_img">
-                <!-- <img src="img/galeria.jpg" alt="">
-                <img src="img/galeria3.jpg" alt=""> -->
+                <img src="img/galeria.jpg" alt="">
+                <img src="img/galeria3.jpg" alt="">
             </div><!--Galey Img-->
             <div class="gal_text">
                 <div class="gal_text_group">
@@ -86,7 +88,7 @@
         </div><!--Center-->
     </section><!--Galery-->
 
-    <section class="about">
+    <section class="about" id="about">
         <h2>Nossa Loja</h2>
         
         <div class="info_text_group center">
@@ -110,7 +112,12 @@
         </div><!--Info Text Group-->
     </section><!--About Info--> 
 
-    <section class="contact">
+    <section class="input_info" id="input_info">
+        <h2>Obrigado por enviar o formulário!</h2>
+        <i class="fa-solid fa-check"></i>
+    </section>
+
+    <section class="contact" id="contact">
         <h1>Entre em contato</h1>
         <div class="center">
             <form class="form_contact">
@@ -122,20 +129,20 @@
 
                 <div class="input_group">
                     <label>Email: </label>
-                    <input type="text" name="name" placeholder="Digite seu email:"/>
+                    <input type="email" name="email" placeholder="Digite seu email:"/>
                 </div><!--Input Group-->
 
                 <div class="input_group">
                     <label>Mensagem: </label>
-                    <textarea placeholder="Digite a sua mensagem"></textarea>
+                    <textarea name="message" placeholder="Digite a sua mensagem"></textarea>
                 </div><!--Input Group-->
 
                 <div class="input_group">
-                    <input type="checkbox" name="name" />
+                    <input type="checkbox" name="checkbox"/>
                     <label>Deseja receber informções no seu E-mail?</label>
                 </div><!--Input Group-->
                 
-                <input type="submit" name="submit" value="Enviar">
+                <button name="submit">Enviar</button>
             </form><!--Form Contato-->
             <div id="map">
 
@@ -152,6 +159,7 @@
         </div><!--Socias-->
     </footer>
 
+    <script src="js/script.js"></script>
     <script src="js/map.js"></script>
     <script async defer
 
